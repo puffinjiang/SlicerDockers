@@ -11,7 +11,19 @@ It includes:
 The build.sh script shows how to make the dockers (change the account
 from stevepieper to your docker hub name)
 
-Then run the container with a command like this:
+# GPU 支持
+
+如果您的主机拥有 NVIDIA GPU，您可以配置 Docker 以在容器内使用它。
+首先，您需要安装 `nvidia-container-toolkit`。请遵循您的发行版的官方说明。
+您可以在 NVIDIA 网站上找到它们：[https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
+
+安装后，您可以在 `docker run` 命令中使用 `--gpus all` 标志来启用 GPU 加速。
+
+然后像这样运行容器（带有 GPU 支持）：
+
+`docker run --gpus all -d -p 8080:8080 --name slicer stevepieper/slicer:5.0.3`
+
+或者不带 GPU 支持：
 
 `docker run -d -p 8080:8080 --name slicer stevepieper/slicer:5.0.3`
 
