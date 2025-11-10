@@ -23,7 +23,7 @@ MAINTAINER pieper@isomics.com
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libgl1-mesa-dri \
     xserver-xorg-video-dummy \
-    xserver-xorg-input-void \
+    xserver-xorg-input-all \
     x11-xserver-utils \
     xinit \
     fonts-dejavu \
