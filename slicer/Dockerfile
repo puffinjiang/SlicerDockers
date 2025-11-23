@@ -23,14 +23,14 @@ RUN apt-get install -y libxcb-icccm4-dev libxcb-image0-dev libxcb-keysyms1-dev l
 #RUN SLICER_URL="https://download.slicer.org/bitstream/62cc52d2aa08d161a31c1af0" && \
 # RUN SLICER_URL="https://download.slicer.org/bitstream/67c51fc129825655577cfee9" && \
 # 5.10.0
-# RUN SLICER_URL="https://download.slicer.org/bitstream/6911b598ac7b1c95e7934427" && \
-#   curl -k -v -s -L $SLICER_URL | tar xz -C /tmp && \
-#   mv /tmp/Slicer* /opt/slicer
 RUN SLICER_URL="https://download.slicer.org/bitstream/6911b598ac7b1c95e7934427" && \
-    wget --tries=5 --timeout=30 -O /tmp/slicer.tar.gz $SLICER_URL && \
-    tar -xzf /tmp/slicer.tar.gz -C /tmp && \
-    mv /tmp/Slicer* /opt/slicer && \
-    rm /tmp/slicer.tar.gz
+  curl -k -v -s -L $SLICER_URL | tar xz -C /tmp && \
+  mv /tmp/Slicer* /opt/slicer
+# RUN SLICER_URL="https://download.slicer.org/bitstream/6911b598ac7b1c95e7934427" && \
+#     wget --tries=5 --timeout=30 -O /tmp/slicer.tar.gz $SLICER_URL && \
+#     tar -xzf /tmp/slicer.tar.gz -C /tmp && \
+#     mv /tmp/Slicer* /opt/slicer && \
+#     rm /tmp/slicer.tar.gz
 
 # copy /opt after extraction slicer (/opt/slicer is extracted tar)
 COPY /etc /etc
