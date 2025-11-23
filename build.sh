@@ -4,9 +4,20 @@
 #VERSION="5.0.3"
 VERSION="5.10.0"
 
-docker build --build-arg VERSION=${VERSION} -t stevepieper/base:$VERSION base
-docker build --build-arg VERSION=${VERSION} -t stevepieper/x11:$VERSION x11
-docker build --build-arg VERSION=${VERSION} -t stevepieper/slicer:$VERSION slicer
+# --- CPU Version ---
+# docker build --build-arg VERSION=${VERSION} -t puffinjiang/base:$VERSION base
+# docker build --build-arg VERSION=${VERSION} -t puffinjiang/x11:$VERSION x11
+# docker build --build-arg VERSION=${VERSION} -t puffinjiang/slicer:$VERSION slicer
+
+# --- NVIDIA GPU Version ---
+# docker build --build-arg VERSION=${VERSION} -t puffinjiang/base-nv-gpu:$VERSION base
+# docker build --build-arg VERSION=${VERSION} -t puffinjiang/x11-nv-gpu:$VERSION x11
+# docker build --build-arg VERSION=${VERSION} -t puffinjiang/slicer-nv-gpu:$VERSION slicer
+
+# --- ROCm GPU Version ---
+docker build --build-arg VERSION=${VERSION} -t puffinjiang/base-rocm-gpu:$VERSION base
+docker build --build-arg VERSION=${VERSION} -t puffinjiang/x11-rocm-gpu:$VERSION x11
+docker build --build-arg VERSION=${VERSION} -t puffinjiang/slicer-rocm-gpu:$VERSION slicer
 
 #SLICER_MORPH_EXTS="MarkupsToModel Auto3dgm SegmentEditorExtraEffects Sandbox SlicerIGT RawImageGuess SlicerDcm2nii SurfaceWrapSolidify SlicerMorph"
 #
