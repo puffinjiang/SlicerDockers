@@ -4,7 +4,7 @@
 
 ARG VERSION="latest"
 
-FROM stevepieper/base:${VERSION}
+FROM puffinjiang/base-rocm:${VERSION}
 MAINTAINER pieper@isomics.com
 
 # Install

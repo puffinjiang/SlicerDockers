@@ -15,9 +15,9 @@ VERSION="5.10.0"
 # docker build --build-arg VERSION=${VERSION} -t puffinjiang/slicer-nv-gpu:$VERSION slicer
 
 # --- ROCm GPU Version ---
-docker build --build-arg VERSION=${VERSION} -t puffinjiang/base-rocm-gpu:$VERSION base
-docker build --build-arg VERSION=${VERSION} -t puffinjiang/x11-rocm-gpu:$VERSION x11
-docker build --build-arg VERSION=${VERSION} -t puffinjiang/slicer-rocm-gpu:$VERSION slicer
+docker build --build-arg VERSION=${VERSION} -t puffinjiang/base-rocm:$VERSION base
+docker build --build-arg VERSION=${VERSION} -t puffinjiang/x11-rocm:$VERSION x11
+docker build --build-arg VERSION=${VERSION} -t puffinjiang/slicer-rocm:$VERSION slicer
 
 #SLICER_MORPH_EXTS="MarkupsToModel Auto3dgm SegmentEditorExtraEffects Sandbox SlicerIGT RawImageGuess SlicerDcm2nii SurfaceWrapSolidify SlicerMorph"
 #

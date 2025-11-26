@@ -3,7 +3,7 @@
 
 ARG VERSION="latest"
 
-FROM stevepieper/x11:${VERSION}
+FROM puffinjiang/x11-rocm:${VERSION}
 MAINTAINER pieper@isomics.com
 
 RUN apt-get install -y libglu1-mesa
