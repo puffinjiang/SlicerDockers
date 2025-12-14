@@ -37,6 +37,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libpulse-dev \
     libnss3 \
     libasound2 \
+    mesa-utils \
     && \
   rm -f /usr/share/applications/x11vnc.desktop && \
   apt-get clean

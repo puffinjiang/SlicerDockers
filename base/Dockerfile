@@ -3,7 +3,7 @@
 # Base image for other SlicerDocker platform images
 # (inspired by https://github.com/dit4c/dockerfile-dit4c-container-base)
 # FROM nvidia/opengl:1.0-glvnd-runtime-ubuntu20.04
-FROM rocm/dev-ubuntu-22.04
+FROM ubuntu:24.04
 MAINTAINER pieper@isomics.com
 
 # Directories that don't need to be preserved in images
