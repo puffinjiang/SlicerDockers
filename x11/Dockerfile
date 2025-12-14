@@ -36,7 +36,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     nitrogen \
     libpulse-dev \
     libnss3 \
-    libasound2 \
+    libasound2t64 \
     mesa-utils \
     && \
   rm -f /usr/share/applications/x11vnc.desktop && \
